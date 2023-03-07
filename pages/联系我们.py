@@ -31,30 +31,5 @@ st.caption(':blue[本翻译模型基于《四库全书》全文语料结合GPT�
 
 # '''正式交互界面'''
 st.caption('选择翻译模型:')
-tab1, tab2, tab3 = st.tabs(["AncientGPT", "SikuGPT", "SikuBERT-Unilm"])
+st.markdown("> 该平台实现了中文古文到中文现代文和英文的自动翻译。在网站首页用户可以直接进入古文翻译界面，在文本输入框中输入需要翻译的古文文本并选择需要翻译的目标语言后，在翻译结果栏便会返回相应的译文。 ")
 
-with tab1:
-    content = st.text_area("输入古汉语", max_chars=512, placeholder='请输入古汉语',key='c1', label_visibility='collapsed')
-
-    begin_trans = st.button("开始翻译", key='begin_tran1')
-    if begin_trans:
-        # st.header("AncientGPT")
-        display_cn = st.text_area('现代汉语翻译结果：',interface('cn'), placeholder='翻译',key='cn1')
-        display_en = st.text_area('英语翻译结果：',interface('en'), placeholder='翻译',key='en1')
-
-with tab2:
-   content = st.text_area("输入古汉语", max_chars=512, placeholder='请输入古汉语',key='c2', label_visibility='collapsed')
-#    st.subheader("SikuGPT")
-   begin_trans = st.button("开始翻译", key='begin_tran2')
-   if begin_trans:
-    # st.header("AncientGPT")
-        display_cn = st.text_area('现代汉语翻译结果：',interface('cn'), placeholder='翻译',key='cn2')
-        display_en = st.text_area('英语翻译结果：',interface('en'), placeholder='翻译',key='en2')
-
-with tab3:
-   content = st.text_area("输入古汉语", max_chars=512, placeholder='请输入古汉语',key='c3', label_visibility='collapsed')
-   begin_trans = st.button("开始翻译", key='begin_tran3')
-   if begin_trans:
-    # st.header("AncientGPT")
-        display_cn = st.text_area('现代汉语翻译结果：',interface('cn'), placeholder='翻译',key='cn3')
-        display_en = st.text_area('英语翻译结果：',interface('en'), placeholder='翻译',key='en3')
