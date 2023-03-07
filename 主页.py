@@ -46,6 +46,7 @@ with tab1:
         # st.header("AncientGPT")
         display_cn = st.text_area('现代汉语翻译结果：',interface('cn'), placeholder='翻译',key='cn1')
         display_en = st.text_area('英语翻译结果：',interface('en'), placeholder='翻译',key='en1')
+        
 
 with tab2:
    content = st.text_area("输入古汉语", max_chars=512, placeholder='请输入古汉语',key='c2', label_visibility='collapsed')
